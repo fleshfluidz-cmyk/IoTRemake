@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#F3F4F6">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Control de Estacionamiento"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#1F2937"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monitoreo Wokwi + DynamoDB"
+        android:textSize="13sp"
+        android:textColor="#6B7280"
+        android:layout_marginBottom="28dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardEstado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#FFFFFF"
+        android:layout_marginBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="28dp">
+
+            <!-- Círculo de color dinámico -->
+            <View
+                android:id="@+id/viewIndicadorColor"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="#9CA3AF"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/tvPlaza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PLAZA #1"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#9CA3AF" />
+
+            <TextView
+                android:id="@+id/tvEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONECTANDO..."
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#1F2937"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tvDistancia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Distancia: -- cm"
+                android:textSize="18sp"
+                android:textColor="#374151"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tvUltimaActualizacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sincronización: pendiente"
+                android:textSize="12sp"
+                android:textColor="#9CA3AF"
+                android:layout_marginTop="14dp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btnActualizar"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="Actualizar Ahora"
+        android:textSize="16sp"
+        app:cornerRadius="12dp"
+        android:backgroundTint="#2563EB" />
+
+</LinearLayout>
