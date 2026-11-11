@@ -30,13 +30,10 @@ import java.util.Locale
 class MainActivity : AppCompatActivity() {
 
 
-    // =========================================================================
-    // CONFIGURACIÓN DE AWS DYNAMODB
-    // Reemplaza estos valores con tus credenciales de AWS antes de ejecutar
-    // =========================================================================
-    private val AWS_ACCESS_KEY = "INGRESA_AQUI_TU_ACCESS_KEY"
-    private val AWS_SECRET_KEY = "INGRESA_AQUI_TU_SECRET_KEY"
-    private val AWS_SESSION_TOKEN = "INGRESA_AQUI_TU_SESSION_TOKEN"
+
+    private val AWS_ACCESS_KEY = "ESCRIBIR_ACCESS_KEY"
+    private val AWS_SECRET_KEY = "ESCRIBIR_SECRET_KEY"
+    private val AWS_SESSION_TOKEN = "ESCRIBIR_AQUÍ_SESSIONTOKEN"
 
     private val AWS_REGION = Regions.US_EAST_1
     private val NOMBRE_TABLA = "Estacionamiento"
@@ -73,7 +70,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Bucle en segundo plano: Consulta periódica cada 2 segundos
+
         lifecycleScope.launch {
             while (isActive) {
                 consultarEstadoDynamoDB()
